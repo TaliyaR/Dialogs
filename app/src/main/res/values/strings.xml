@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dialogs</string>
+
+    <string name="dialog_screen_edit_text">Введите сообщение…</string>
 </resources>
