@@ -38,4 +38,9 @@ class MessageListAdapter(
             return VIEW_TYPE_MESSAGE_RECEIVED
         }
     }
+
+    fun setList(list: List<Message>) {
+        data = list
+        this.notifyDataSetChanged()
+    }
 }
