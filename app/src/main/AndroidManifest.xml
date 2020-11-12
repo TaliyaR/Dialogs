@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dialogs">
         <activity android:name=".ProfileScreenActivity"></activity>
-        <activity android:name=".entities.ProfileScreenActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
