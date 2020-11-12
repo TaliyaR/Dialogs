@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 data class Chat(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    @Embedded
+    @Embedded(prefix = "rec_")
     val receiver: User,
-    @Embedded
+    @Embedded(prefix = "send_")
     val sender: User
 )

@@ -11,6 +11,6 @@ interface MessageDao {
     @Insert
     fun addMessage(message: Message)
 
-    @Query("SELECT * FROM Message WHERE chatId == :chatId")
+    @Query("SELECT * FROM Message WHERE chat_id = :chatId")
     fun getListOfMessageByChatId(chatId: Int): List<Message>
 }

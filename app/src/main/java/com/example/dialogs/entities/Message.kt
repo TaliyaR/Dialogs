@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 @Entity
 data class Message(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int? = null,
     val message: String,
-    @Embedded
+    @Embedded(prefix = "chat_")
     val chat: Chat
 )
