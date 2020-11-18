@@ -21,11 +21,7 @@ class MessageListAdapter(
 
     override fun onBindViewHolder(holder: MessageHolder<*>, position: Int) {
         val item = data[position]
-        when (holder) {
-            is SendMessageHolder -> holder.bind(item)
-            is ReceiveMessageHolder -> holder.bind(item)
-            else -> throw IllegalArgumentException()
-        }
+        holder.bind(item)
     }
 
     override fun getItemCount(): Int = data.size

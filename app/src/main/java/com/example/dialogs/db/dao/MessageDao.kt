@@ -9,8 +9,8 @@ import com.example.dialogs.entities.Message
 interface MessageDao {
 
     @Insert
-    fun addMessage(message: Message)
+    suspend fun addMessage(message: Message)
 
     @Query("SELECT * FROM Message WHERE chat_id = :chatId")
-    fun getListOfMessageByChatId(chatId: Int): List<Message>
+    suspend fun getListOfMessageByChatId(chatId: Int): List<Message>
 }

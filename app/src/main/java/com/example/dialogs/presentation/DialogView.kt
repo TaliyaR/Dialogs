@@ -8,4 +8,10 @@ interface DialogView : MvpView {
 
     @Skip
     fun setMessageList(list: List<Message>)
+
+    @Skip
+    fun setNullListText(boolean: Boolean)
+
+    @Skip
+    fun setEditTextEmptyAndScrollList()
 }

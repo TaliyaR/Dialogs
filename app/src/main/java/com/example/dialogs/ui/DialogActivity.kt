@@ -1,6 +1,7 @@
 package com.example.dialogs.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dialogs.R
 import com.example.dialogs.entities.Message
@@ -40,12 +41,28 @@ class DialogActivity : MvpAppCompatActivity(), DialogView {
             presenter.onSentMessageClick(et_chatbox.text.toString())
         }
 
-        rv_message_list.layoutManager = LinearLayoutManager(this)
+        val layoutMgr = LinearLayoutManager(this)
+        layoutMgr.stackFromEnd = true
+        rv_message_list.layoutManager = layoutMgr
         rv_message_list.adapter = messageListAdapter
-
     }
 
     override fun setMessageList(list: List<Message>) {
         messageListAdapter.setList(list)
+    }
+
+    override fun setNullListText(boolean: Boolean) {
+        if (boolean) {
+            tv_nullList.visibility = View.VISIBLE
+            rv_message_list.visibility = View.INVISIBLE
+        } else {
+            tv_nullList.visibility = View.INVISIBLE
+            rv_message_list.visibility = View.VISIBLE
+        }
+    }
+
+    override fun setEditTextEmptyAndScrollList() {
+        et_chatbox.setText("")
+        rv_message_list.scrollToPosition(messageListAdapter.itemCount - 1)
     }
 }
