@@ -3,6 +3,7 @@ package com.example.dialogs.ui
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.dialogs.FeatureModel
 import com.example.dialogs.R
 import com.example.dialogs.entities.Message
 import com.example.dialogs.presentation.DialogPresenter
@@ -21,6 +22,9 @@ class DialogActivity : MvpAppCompatActivity(), DialogView {
     companion object {
         fun newInstance() = DialogActivity()
     }
+
+    @Inject
+    lateinit var featureModel: FeatureModel
 
     @Inject
     lateinit var diPresenter: DialogPresenter
