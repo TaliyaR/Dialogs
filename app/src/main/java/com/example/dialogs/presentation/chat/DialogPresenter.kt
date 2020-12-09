@@ -1,4 +1,4 @@
-package com.example.dialogs.presentation
+package com.example.dialogs.presentation.chat
 
 import com.example.dialogs.entities.Chat
 import com.example.dialogs.entities.Message

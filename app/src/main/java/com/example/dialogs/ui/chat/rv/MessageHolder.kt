@@ -1,4 +1,4 @@
-package com.example.dialogs.ui.rv
+package com.example.dialogs.ui.chat.rv
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

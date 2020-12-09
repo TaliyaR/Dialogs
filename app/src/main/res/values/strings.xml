@@ -5,4 +5,6 @@
     <string name="dialog_screen_null_list_text">Здесь пока ничего нет…</string>
 
     <string name="empty_screen">Этот экран закрыт фича-флагом</string>
+    <string name="chat">Chat</string>
+
 </resources>
